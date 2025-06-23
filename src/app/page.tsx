@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="h-screen flex items-center justify-center">
-      <Button variant="destructive" size="lg" > <CirclePlus /> Click Me</Button>
+    <div>
+      Home
     </div>
   );
 }
