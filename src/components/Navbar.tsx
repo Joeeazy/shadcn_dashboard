@@ -15,14 +15,17 @@ import {
 import {  } from "lucide-react"
 import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
+import { SidebarTrigger, useSidebar } from './ui/sidebar'
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme()
+  const {toggleSidebar} = useSidebar()
 
   return (
     <nav className='p-4 flex justify-between items-center'>
       {/* left side */}
-      collapsebutton
+      {/* <Button variant='outline' onClick={toggleSidebar}>Custom Button</Button> */}
+      <SidebarTrigger />
       {/* right side */}
       <div className='flex items-center gap-4'>
       <Link href="/">Dashboard</Link>
