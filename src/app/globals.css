@@ -79,6 +79,8 @@
   --custom-chart1: oklch(85% 0.3 60);
   --custom-chart2: oklch(55% 0.35 110);
   --custom-chart3: oklch(85% 0.4 90);
+  --custom-chart4: oklch(70% 0.2 110);
+  --custom-chart5: oklch(50% 0.5 90);
 }
 
 .dark {
@@ -116,6 +118,8 @@
   --custom-chart1: oklch(85% 0.3 53);
   --custom-chart2: oklch(90% 0.15 100);
   --custom-chart3: oklch(85% 0.4 100);
+  --custom-chart4: oklch(70% 0.4 110);
+  --custom-chart5: oklch(50% 0.4 90);
 }
 
 @layer base {
