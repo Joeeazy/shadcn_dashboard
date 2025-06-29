@@ -22,7 +22,7 @@ export default function Navbar() {
   const {toggleSidebar} = useSidebar()
 
   return (
-    <nav className='p-4 flex justify-between items-center'>
+    <nav className='p-4 flex justify-between items-center sticky top-0 bg-background z-10'>
       {/* left side */}
       {/* <Button variant='outline' onClick={toggleSidebar}>Custom Button</Button> */}
       <SidebarTrigger />
