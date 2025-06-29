@@ -7,13 +7,11 @@ import React from 'react'
 import { Badge } from '@/components/ui/badge';
 import {
     Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
     SheetTrigger,
   } from "@/components/ui/sheet"
 import { Button } from '@/components/ui/button'
+import EditUser from '@/components/EditUser'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 export default function singleUsersPage() {
   return (
@@ -74,18 +72,13 @@ export default function singleUsersPage() {
             {/* Information Container */}
             <div className='bg-primary-foreground p-4 rounded-lg'>
                 <div className='flex items-center justify-between'>
-                <h1 className='text-xl font-semibold'>User Indormation</h1>
+                <h1 className='text-xl font-semibold'>User Information</h1>
                 <Sheet>
+                    <>
                     <SheetTrigger asChild><Button>Edit Profile</Button></SheetTrigger>
-                    <SheetContent className="w-[400px] sm:w-[540px]">
-                        <SheetHeader>
-                        <SheetTitle>Are you absolutely sure?</SheetTitle>
-                        <SheetDescription>
-                            This action cannot be undone. This will permanently delete your account
-                            and remove your data from our servers.
-                        </SheetDescription>
-                        </SheetHeader>
-                    </SheetContent>
+                    <EditUser />
+                    </>
+                    
                 </Sheet>
                 </div>
                 
@@ -99,8 +92,12 @@ export default function singleUsersPage() {
                         <span>Joe.Mwangi</span>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <span className='font-bold'>email:</span>
+                        <span className='font-bold'>Email:</span>
                         <span>mwangi123@gmail.com</span>
+                    </div>
+                    <div className='flex items-center gap-2'>
+                        <span className='font-bold'>Phone:</span>
+                        <span>254705045861</span>
                     </div>
                     <div className='flex items-center gap-2'>
                         <span className='font-bold'>Location:</span>
@@ -123,8 +120,21 @@ export default function singleUsersPage() {
             {/* Right */}
             <div className='w-full xl:w-2/3 space-y-6'>
             {/* User Card Container */}
-            <div className='bg-primary-foreground p-4 rounded-lg'>
-                Cardlist 2
+            <div className='bg-primary-foreground p-4 rounded-lg space-y-2'>
+                <div className='flex items-center gap-2'>
+                    <Avatar className='size-12'>
+                    <AvatarImage
+          src="https://github.com/evilrabbit.png"
+          alt="@evilrabbit"
+        />
+        <AvatarFallback>MJ</AvatarFallback>
+                    </Avatar>
+                    <h1 className='text-xl font-semibold'>Mwangi Joe</h1>
+                </div>
+                <p className='text-sm text-muted-foreground'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Eos quisquam dolorem neque. Ea, deleniti! Odit, accusantium. 
+                    Reprehenderit accusamus beatae optio rerum dolorum praesentium totam, 
+                    doloribus placeat nobis fuga quod provident?</p>
             </div>
             {/* Chart Container */}
             <div className='bg-primary-foreground p-4 rounded-lg'>
