@@ -1,7 +1,8 @@
 import React from 'react'
-import { Payment } from './columns';
+import { columns, Payment } from './columns';
+import { DataTable } from './data-table';
 
-const getData = async (): Promise<Payment> => {
+const getData = async (): Promise<Payment[]> => {
     return [
       {
         id: "728ed521",
@@ -13,7 +14,7 @@ const getData = async (): Promise<Payment> => {
       {
         id: "728ed522",
         amount: 124,
-        status: "success",
+        status: "processing",
         username: "Jane Doe",
         email: "janedoe@gmail.com",
       },
@@ -262,6 +263,11 @@ const getData = async (): Promise<Payment> => {
 export default async function Paymentspage() {
     const data = await getData()
   return (
-    <div>page</div>
+    <div>
+      <div className="mb-8 px-4 py-2 bg-secondary rounded-md">
+        <h1 className='font-semibold'>All Payments</h1>
+      </div>
+      <DataTable columns={columns} data={data} />
+    </div>
   )
 }
